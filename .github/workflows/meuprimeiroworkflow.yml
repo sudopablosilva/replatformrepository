@@ -46,3 +46,9 @@ jobs:
           echo "Acabei de listar os arquivos"
           
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+  job1:
+  job2:
+    needs: job1
+  job3:
+    needs: [job1, job2]
